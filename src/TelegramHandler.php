@@ -111,6 +111,7 @@ class TelegramHandler extends AbstractProcessingHandler
                 return view($template, array_merge($record->toArray(), [
                         'appName'   => $this->appName,
                         'appEnv'    => $this->appEnv,
+                        'record'    => $record,
                         'formatted' => $record->formatted,
                     ])
                 )->render();
